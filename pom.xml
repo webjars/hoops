@@ -98,6 +98,10 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
+                                    <fileset dir="${project.build.directory}/hoops-${upstream.version}">
+                                        <include name="LICENSE" />
+                                        <include name="README.md" />
+                                    </fileset>
                                     <fileset dir="${project.build.directory}/hoops-${upstream.version}/lib" />
                                     <fileset dir="${project.build.directory}/hoops-${upstream.version}/dist" />
                                 </move>
