@@ -22,6 +22,18 @@
         <upstream.url>https://github.com/danielstjules/hoops/archive</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
         <extractDir>${project.build.directory}/hoops-${upstream.version}</extractDir>
+        <requirejs>
+            {
+                "paths": {
+                    "hoops": "hoops"
+                },
+                "shim": {
+                    "hoops": {
+                        "exports": "hoops"
+                    }
+                }
+            }
+        </requirejs>
     </properties>
 
     <developers>
